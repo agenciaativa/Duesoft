@@ -1,0 +1,27 @@
+<section id="portfolio">
+    <div class="container">
+        <div ng-bind-html="vm.portfolio.titulo_texto_portfolio"></div>
+        <div ng-bind-html="vm.portfolio.texto_portfolio"></div>
+
+        <script id="template/carousel/carousel.html" type="text/ng-template">
+            <ol class="carousel-indicators" ng-if="slides.length > 1">
+                <li ng-repeat="s in slides track by $index" ng-class="{ active: isActive(s) }" ng-click="select(s)"></li>
+            </ol>
+            <div class="carousel-inner" ng-transclude></div>
+            <a role="button" href class="left carousel-control" ng-click="prev()" ng-class="{ disabled: isPrevDisabled() }" ng-if="slides.length > 1">
+                <img src="/images/arrow-left.png" alt="Prev">
+            </a>
+            <a role="button" href class="right carousel-control" ng-click="next()" ng-class="{ disabled: isNextDisabled() }" ng-if="slides.length > 1">
+                <img src="/images/arrow-left.png" alt="Next">
+            </a>
+        </script>
+
+        <div id="slider">
+            <div uib-carousel class="slide" data-ride="carousel" active="0" interval="3000" no-wrap="false" template-url="template/carousel/carousel.html">
+                <div uib-slide ng-repeat="s in vm.portfolio.imagens track by s.id" index="$index">
+                    <img ng-src="{{ ::s.imagem }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

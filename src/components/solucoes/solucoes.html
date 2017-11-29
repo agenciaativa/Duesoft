@@ -1,0 +1,50 @@
+<section id="solucoes">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-4 col-lg-3">
+                <div ng-bind-html="vm.solucoes.titulo"></div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-sm-9 col-md-8 col-lg-8">
+                        <div ng-bind-html="vm.solucoes.texto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row grid-solucoes">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="col-sm-6 col-md-6 col-lg-6 solucao" ng-repeat="solucao in vm.solucoes.solucoes track by solucao.id">
+                    <a ui-sref="solucoes-detalhe({solucaoSlug: solucao.slug})">
+                        <img ng-src="{{ ::solucao.imagem }}" alt="{{ ::solucao.nome }}" class="img-responsive" />
+                        <div class="title-wrap" ng-bind-html="solucao.titulo"></div>
+                    </a>
+                </div>
+                <!--<div class="col-sm-6 col-md-6 col-lg-6 solucao">
+                    <a ui-sref="solucoes-detalhe({solucaoSlug: 'crm'})">
+                        <img src="/images/solucao2.jpg" alt="GESTÃO DE CLIENTES CRM" class="img-responsive" />
+                        <div class="title-wrap">
+                            <p>GESTÃO DE CLIENTES <span>CRM</span></p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 solucao">
+                    <a ui-sref="solucoes-detalhe({solucaoSlug: 'gestao-de-pessoas'})">
+                        <img src="/images/solucao3.jpg" alt="GESTÃO DE PESSOAS" class="img-responsive" />
+                        <div class="title-wrap">
+                            <p>GESTÃO DE PESSOAS</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 solucao">
+                    <a ui-sref="solucoes-detalhe({solucaoSlug: 'gestao-de-facilities'})">
+                        <img src="/images/solucao4.jpg" alt="GESTÃO DE FACILITIES" class="img-responsive" />
+                        <div class="title-wrap">
+                            <p>GESTÃO DE FACILITIES</p>
+                        </div>
+                    </a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</section>

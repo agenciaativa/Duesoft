@@ -1,0 +1,49 @@
+<section id="a-duesoft">
+    <div class="container">
+        <div class="row solucao valign-content margem">
+            <div class="col-sm-8 col-md-8 col-lg-7">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6 col-lg-6">
+                        <div ng-bind-html="vm.sobre.institucional_titulo"></div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div ng-bind-html="vm.sobre.institucional_texto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-5 img-institucional">
+                <img ng-src="{{ ::vm.sobre.institucional_imagem }}" alt="Duesoft Sistemas" class="img-responsive" style="margin: auto;" />
+            </div>
+        </div>
+        <div class="row margem">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!--<div class="principios">
+                    <h3>MISSÃO</h3>
+                    <p>Nossa missão é desenvolver soluções que propiciem às empresas controlar e gerir de forma eficaz os seus negócios.</p>
+                </div>
+                <div class="principios">
+                    <h3>VISÃO</h3>
+                    <p>Ser reconhecida como a melhor empresa fornecedora de sistemas do mercado.</p>
+                </div>
+                <div class="principios">
+                    <h3>VALORES</h3>
+                    <p>
+                        Trabalhamos com ética e confidencialidade das informações de nossos clientes.
+                        Valorizamos cada contribuição individual para o nosso sucesso, e motivamos as pessoas através da integridade,
+                        ética e apoio constante para o desenvolvimento pessoal. Prezamos pela responsabilidade social e ambiental.
+                    </p>
+                </div>-->
+                <div ng-bind-html="vm.sobre.texto"></div>
+            </div>
+        </div>
+        <div class="row valign-content row-video">
+            <div class="col-sm-5 col-md-5 col-lg-4 text-video">
+                <div ng-bind-html="vm.sobre.video_titulo"></div>
+                <div ng-bind-html="vm.sobre.video_texto"></div>
+            </div>
+            <div class="col-sm-7 col-md-7 col-lg-8 video-player">
+                <img class="img-responsive" ng-src="{{ ::vm.sobre.video_link }}" />
+            </div>
+        </div>
+    </div>
+</section>

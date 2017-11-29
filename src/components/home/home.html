@@ -1,0 +1,72 @@
+<div tmpl-banner banners="vm.home.banners"></div>
+
+<section id="sobre" class="container">
+    <div class="row">
+        <div class="col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-sm-10 col-md-10 col-lg-10">
+            <div class="row valign-content">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <img ng-src="{{ ::vm.home.institucional_imagem }}" alt="Duesoft Sistemas" class="img-responsive" style="margin: auto;" />
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 texto-sobre">
+                    <div ng-bind-html="vm.home.institucional_titulo"></div>
+                    <div ng-bind-html="vm.home.institucional_texto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="descritivo-home">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-md-offset-3 col-lg-offset-3 col-sm-8 col-md-6 col-lg-6">
+                <div ng-bind-html="vm.home.descritivo_titulo"></div>
+            </div>
+        </div>
+        <div class="row flex-container">
+            <div class="col-sm-6 col-md-6 col-lg-6 flex-item" ng-repeat="di in vm.home.descritivo_itens track by di.id">
+                <div ng-bind-html="di.texto"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-5 col-md-offset-5 col-lg-offset-5 col-sm-2 col-md-2 col-lg-2 text-center mais">
+                <a href="#" class="btn">SAIBA MAIS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="solucoes-home">
+    <div class="container">
+        <div class="row valign-content">
+            <div class="col-sm-5 col-md-4 col-lg-4">
+                <div ng-bind-html="vm.home.solucoes_home.titulo"></div>
+                <div ng-bind-html="vm.home.solucoes_home.texto"></div>
+            </div>
+            <div class="col-sm-7 col-md-8 col-lg-8 grid-solucoes">
+                <div class="row solucoes">
+                    <div class="col-sm-6 col-md-6 col-lg-6 item" ng-repeat="item in vm.home.solucoes_home.solucoes track by item.id">
+                        <a ng-href="{{ ::item.link }}">
+                            <img class="img-responsive" ng-src="{{ ::item.imagem }}" />
+                            <div class="title-wrap">
+                                <div ng-bind-html="item.titulo"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row valign-content row-video">
+            <div class="col-sm-7 col-md-7 col-lg-8 video-player">
+                <img class="img-responsive" ng-src="{{ ::vm.home.solucoes_home.video_link }}" />
+            </div>
+            <div class="col-sm-5 col-md-5 col-lg-4 text-video">
+                <div ng-bind-html="vm.home.solucoes_home.video_titulo"></div>
+                <div ng-bind-html="vm.home.solucoes_home.video_texto"></div>
+                <div class="text-right mais">
+                    <a href="#" class="btn">SAIBA MAIS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
